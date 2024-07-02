@@ -95,6 +95,16 @@ const valor4 = 5 < 10 //true
 const valor5 = 6 > 20//false
 const valor6 = 3 === 3//true
 
+let animais =["dog frances", "dog alemanha", "caramelo", "salcinha",]
+console.log(animais[0])
+console.log(animais[1])
+console.log(animais[2])
+console.log(animais[3])
+
+const readlineSync = require('readline-sync');
+
+const === Number(readlineSync.question('insira um numero de 1 a 3'))
+
 console.log(valor4 && valor5 && valor6)//false
 
 valor1//true
