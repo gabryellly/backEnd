@@ -1,0 +1,46 @@
+#aula 3
+
+/*const readlineSync = require('readline-sync');
+const num1 = Number(readlineSync.question('insira um numero'))
+const num2 = Number(readlineSync.question('insira um numero'))
+console.log(num1 === num2) 
+console.log(num1 !== num2) 
+console.log(num1 > num2)
+console.log(num1 >= num2)
+console.log(num1 < num2)
+console.log(num1 <= num2)*/
+
+/*const readlineSync = require('readline-sync');
+let senha = leitor.question('insira a senha')
+let senhaCorreta = "78098"
+
+if(senha = senhaCorreta){
+    console.log*/
+
+/*let leitor = require('readline-sync');
+let v1 = leitor.questionFloat('Insira o primeiro valor')
+let v2 = leitor.questionFloat('insira o segundo valor')
+let v3 = leitor.questionFloat('insira o terceiro valor')
+
+if(v1 > v2 && v1 > v3){
+    console.log('0 $(v1) e o maior numero')
+} else if(v2 > v1 && v2 > v3){
+    console.log('0 $(v2) e o maior numero')
+} else if (v3 > v1 && v3 > v2){ 
+    console.log('0 $(v3) e o maior numero')
+} else {
+    console.log('os valores sao iguais ou incorretos')
+function positivoOuNegativo(Number){
+    if(Number > 0) {
+        console.log('o valor ${Number} e zero')
+    } else {
+        console.log('valor inexistente')
+    }
+}
+
+let Number = leitor.questionInt(insira um numero)*/
+
+
+//let leitor = require('readline-sync')
+
+//function positivoOuNegativo(Number)
