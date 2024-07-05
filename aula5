@@ -1,0 +1,136 @@
+//instalar typescript
+//npm install -g typescript
+
+//transpilar para o javascript
+//npx tsc nomeDoArquivo.ts
+
+//node nomdeDoArquivo javascript.js
+
+
+
+//string
+/*let nome:string = 'gaby'
+
+//number
+let numero:Number = 99 
+
+//boolean
+let gameOver:boolean = true
+
+//array
+let arr: Array<Number> = [1,2,3]
+
+let array: Number[] = [1,2,3]
+
+//objeto
+let person: {name: String, age: Number} =
+{
+    name: "gaby",
+    age: 15
+}
+
+
+function soma (num1:Number,num2:Number):Number {
+    return num1 + num2
+}
+
+function frase (nome:String):String {
+    return 'ola ${nome}, tudo bem'
+}
+
+function chamaAlgo(nome:String):void {
+    console.log('e ai ${nome}')
+}
+*/
+
+
+/*function frase (nome?:String):void {
+    console.log("hello",nome || "word")
+
+}
+
+frase('gaby')
+
+function desconto (preco:Number, desconto:Number = 0.05):Number {
+    return preco * (1 - desconto)
+}
+
+console.log(desconto(5))*/
+
+
+/*function frase (nome:String = 'gaby', idade:Number = 15):void {
+    console.log('ola ${nome}, voce tem ${idade} anos.')
+}
+
+frase('gaby', 15)
+
+//classe > molde
+//classe define oq precisamos para fazer o objeto
+
+//objeto > oq esta no molde
+*/
+
+/*class Cachorro {
+    nome:String
+    peso:Number
+    pelagem:String
+    raca:String
+
+    constructor(dogNome:String,dogPeso:Number,dogPelagem:String){
+        this.nome = dogNome
+        this.peso = dogPeso
+        this.pelagem = dogPelagem
+        this.raca = 'goldem'
+    }
+
+    latir():void{
+        console.log(`${this.nome} esta latindo`)
+    }
+
+    correr():void {
+        console.log(`${this.nome} esta correndo.`)
+    }
+
+    comer():void {
+        console.log(`{$this.nome} esta comendo.`)
+    }
+}
+
+
+
+const meuCachorro = new Cachorro('cristal',10,'branco com marrom')
+const meuOutroCachorro = new Cachorro('pingo',13,'preto')
+
+console.log(meuCachorro.nome)
+meuCachorro.latir()*/
+
+
+class Coruja1 {
+    tamanho:number
+    cor:string
+    lugar:string
+
+    constructor(corujaTamanho:number,corujaCor:string,corujaLugar){
+        this.tamanho = corujaTamanho
+        this.cor = corujaCor
+        this.lugar = corujaLugar
+}
+    voar()void {
+        console.log(`{$this.coruja} esta voando`)
+    }
+    
+    gritando()void {
+        console.log(`{$this.coruja} esta fazendo som`)
+    }
+
+    dormindo()void {
+        console.log(`{$this.coruja} esta dormindo`)
+    }
+}
+
+
+const aCoruja = nem Coruja(`10,cinza,arvore`)
+console.log(aCoruja)
+aCoruja.gritando() 
+
+    
