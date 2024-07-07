@@ -1,0 +1,59 @@
+#EXERCICIO
+classe Guerreiro{
+    nome:string
+    arma:string
+    forca:number
+    saude:number
+
+    constructor(guerreiroNome:string,guerreiroArma:string,guerreiroForca:number,guerreiroSaude:number){
+
+    this.nome = guerreiroNome
+    this.arma = guerreiroArma
+    this.forca = guerreiroForca
+    this.saude = guerreiroSaude
+  }
+
+  Lutar()void{
+    console.log(´${this.Nome} esta lutando com o Monstro´)
+
+  }
+}
+
+const 0Guerreiro = nem Guerreiro('Guerreiro','espada',50,100)
+
+console.log(0Guerreiro.nome)
+0Guerreiro.lutar()
+
+
+
+
+
+classe Monstro{
+    nome:string
+    tipo:string
+    forca:number
+    saude:number
+
+    constructor(monstroNome:string,monstroTipo:string,monstroForca:number,monstroSaude:number){
+    this.nome = monstroNome
+    this.tipo = monstroTipo
+    this.Forca = monstroForca
+    this.saude = monstroSaude
+
+
+   } 
+
+   Lutar()void{
+    console.log(`${this.nome} esta lutando com Guerreiro`)
+
+
+   }
+
+}
+
+
+const 0Monstro = nem Monstro('Monstro','fogo',50,10)
+
+console.log(0Monstro.nome)
+0Monstro.lutar()
+
