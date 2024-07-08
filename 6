@@ -1,0 +1,39 @@
+aula 6 
+export class Moto {
+    //ATRIBUTOS
+    marca: string;
+    tipo: string;
+    velocidade: number;
+
+    //METODO
+    constructor(marca: string, tipo: string) {
+        this.marca = marca;
+        this.tipo = tipo;
+        this.velocidade = 100;
+    }
+
+    correndo(Moto):void {
+    console.log('a moto ${this.marca} esta correndo');
+  }
+}
+
+/*getInfo():void {
+    console.log
+}*/
+
+export class Carro {
+    marca: string;
+    tipo: string;
+    velocidade: number;
+
+    constructor(marca: string, tipo: string, velocidade: number) {
+        this.marca = marca;
+        this.tipo = tipo;
+        this.velocidade = 80;
+    }
+
+    correndo(Carro):void {
+    console.log('o carro ${this.marca} esta correndo')
+  }
+}
+
