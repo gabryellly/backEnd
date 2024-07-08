@@ -1,59 +1,73 @@
 #EXERCICIO
-classe Guerreiro{
-    nome:string
-    arma:string
-    forca:number
-    saude:number
+// Definição da classe Guerreiro
+class Guerreiro {
+    nome: string;
+    tipo: string;
+    forca: number;
+    saude: number;
 
-    constructor(guerreiroNome:string,guerreiroArma:string,guerreiroForca:number,guerreiroSaude:number){
-
-    this.nome = guerreiroNome
-    this.arma = guerreiroArma
-    this.forca = guerreiroForca
-    this.saude = guerreiroSaude
-  }
-
-  Lutar()void{
-    console.log(´${this.Nome} esta lutando com o Monstro´)
-
-  }
-}
-
-const 0Guerreiro = nem Guerreiro('Guerreiro','espada',50,100)
-
-console.log(0Guerreiro.nome)
-0Guerreiro.lutar()
+    constructor(nome: string, tipo: string, forca: number) {
+        this.nome = nome;
+        this.tipo = tipo;
+        this.forca = forca;
+        this.saude = 100;
+    }
 
 
+    atacarMonstro(monstro: Monstro):void {
+        console.log(`${this.nome} ataca ${monstro.nome}!`);
+        monstro.receberDano(this.forca);
+    }
 
+    receberDano(dano: number):void {
+        this.saude -= dano;
+        console.log(`${this.nome} recebe ${dano} de dano.`);
+        if (this.saude <= 0) {
+            console.log(`${this.nome} foi derrotado!`);
+        }
+    }
 
-
-classe Monstro{
-    nome:string
-    tipo:string
-    forca:number
-    saude:number
-
-    constructor(monstroNome:string,monstroTipo:string,monstroForca:number,monstroSaude:number){
-    this.nome = monstroNome
-    this.tipo = monstroTipo
-    this.Forca = monstroForca
-    this.saude = monstroSaude
-
-
-   } 
-
-   Lutar()void{
-    console.log(`${this.nome} esta lutando com Guerreiro`)
-
-
-   }
-
+    info():void {
+        console.log(`O guerreiro ${this.nome} do tipo ${this.tipo} tem ${this.saude}.`)
+    }
 }
 
 
-const 0Monstro = nem Monstro('Monstro','fogo',50,10)
+class Monstro {
+    nome: string;
+    forca: number;
+    saude: number;
 
-console.log(0Monstro.nome)
-0Monstro.lutar()
+    constructor(nome: string) {
+        this.nome = nome;
+        this.forca = 50;
+        this.saude = 10;
+    }
 
+   
+    atacarGuerreiro(guerreiro: Guerreiro):void {
+        console.log(`${this.nome} ataca ${guerreiro.nome}!`);
+        guerreiro.receberDano(this.forca);
+    }
+
+ 
+    receberDano(dano: number):void {
+        this.saude -= dano;
+        console.log(`${this.nome} recebe ${dano} de dano.`);
+        if (this.saude <= 0) {
+            console.log(`${this.nome} foi derrotado!`);
+        }
+    }
+
+    info():void {
+        console.log(`O monstro ${this.nome} tem ${this.saude} de saude.`)
+    }
+}
+
+
+let meuGuerreiro = new Guerreiro("Conan", "Bárbaro", 100);
+let monstro = new Monstro("Dragão")
+
+
+meuGuerreiro.atacarMonstro(monstro)
+monstro.info()
