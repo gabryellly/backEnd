@@ -1,0 +1,55 @@
+/*export class animal {
+    name: string;
+    weight: number;
+
+    constructor(name: string, weight: number){
+        this.name;
+        this.weight;
+    }
+
+    comer(quantidade: number): void {
+        console.log("o animal esta comendo" + quantidade)
+    }
+}*/
+
+import { Coruja } from "./Coruja";
+
+export class Animal {
+    cor: string;
+
+    constructor (cor: string)
+    this.cor
+}
+
+const Animal1 = new Animal("cinza")
+console.log(Animal1)
+class pai {
+    name: string; 
+    cabelo: string;
+    
+
+
+    constructor (name: string , cabelo: string){
+        this.name = paiName;
+        this.cabelo = paiCabelo;
+        
+
+        
+    }
+
+}
+
+const Meupai = new ('"geovane" , "preto" ')
+console.log(Meupai)
+
+class Filho extends Pai {
+    name: string;
+    cabelo: string;
+    idade: string;
+    
+
+
+    constructor (idade: number){
+        super(nome,cabelo)
+        this.idade = FilhoIdade;
+    }
