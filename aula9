@@ -1,0 +1,75 @@
+/*export interface Car {
+    model: string;
+    year: number;
+
+    startEngine(): void 
+
+}
+
+//nao se coloca logica na interface so na class
+
+
+
+
+
+//toyota
+
+import { car } from "./Car";
+
+export class Toyota implements Car {
+    model: string;
+    year: number;
+
+
+    constructor (model: string, year: number){
+        this.model = model
+        this.year = year
+    }
+
+    startEngine(): void {
+        console.log('o carro modelo ${this.model} esta ligando')
+
+    
+    }
+}*/
+
+import { Produtos } from "./exercicio9/produtos"
+
+export class Produtos1 implements Produtos {
+    doce: string;
+    pao: string;
+    arroz: string;
+
+    constructor (doce: string, pao: string, arroz: string){
+        this.doce = doce
+        this.pao = pao 
+        this.arroz = arroz
+    }
+}
+
+    startEngine(): void {
+        console.log('o ${this.doce} esta delicioso')
+
+    startEngine(): void {
+        console.log('o ${this.pao} esta macio')
+
+    startEngine(): void {
+        console.log('o ${this.arroz} esta otimo para cozinhar ')
+    }
+
+    
+    
+    doce.number(3)
+    console.log('peguei ${number} ${this.doce}')
+
+    pao.number(5)
+    console.log('peguei ${number} ${this.pao}')
+
+    arroz.number(1)
+    console.log('peguei ${number} ${this.arroz')
+
+
+        }
+    
+}
+
