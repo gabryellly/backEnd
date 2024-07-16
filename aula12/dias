@@ -22,3 +22,27 @@ enum Direcoes {
 for (let direcao in Direcoes) {
     console.log(direcao);
 }
+
+
+function diaMensagem(dia : DiasDaSemana): string {
+    switch (dia) {
+        case DiasDaSemana.Segunda:
+            return "comeco da semana";
+        case DiasDaSemana.Terca:
+            return "";
+       
+            return "";
+        case DiasDaSemana.Sexta:
+            return "";
+        case DiasDaSemana.Sabado:
+            return "";
+        default:
+            return ""
+    
+    }
+}
+
+const diaInput = readlineSync.question("digite um numero de 1 a 7 para o dia da semana")
+const diaNumero = Number(diaInput)
+
+console.log(diaMensagem(diaNumero))
