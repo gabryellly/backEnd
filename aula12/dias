@@ -1,0 +1,24 @@
+enum DiasDaSemana {
+    Segunda,
+    Terca,
+    Quarta,
+    Quinta,
+    Sexta,
+    Sabado,
+    Domingo,
+
+}
+
+console.log(DiasDaSemana.Segunda);
+
+
+enum Direcoes {
+    Norte,
+    Sul,
+    Leste,
+    Oeste,
+}
+
+for (let direcao in Direcoes) {
+    console.log(direcao);
+}
