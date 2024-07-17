@@ -1,0 +1,89 @@
+/*for (let i:number = 10; i > 0; i --) {
+    if (i % 2 === 0) {
+        console.log('TIC')
+    } else {
+        console.log('TAC')
+    }
+  }
+    console.log('BOOOMM!')
+
+
+for (let i:string = 'a'; 1 !== 'abababa'; i += 'ba') {
+    console.log(i)
+}
+
+let ficcao = {
+    "fundacao": "isaac Asimov",
+    "duna": "frank herbert"
+};
+
+for (let livro in ficcao) {
+    console.log('autor do livro "${livro}": ${ficcao[livro]}');
+}
+
+let meuObjeto:object = {
+    nome1 : 'valor1',
+    nome2 : 'valor2',
+    nome3 : 'valor3',
+    nome4 : 'valor4',
+    nome5 : 'valor5', 
+}
+
+console.log(keys(meuObjeto)[0])
+
+for (let elemento in meuObjeto) {
+    console.log('o elemento ${elemento tem valor ${meuObjeto(elemento)}')
+}
+
+
+let tolkienLivros = ['senhor dos aneis', 'o hobbit', 'contos inacabados'];
+
+tolkienLivros.forEach(livros => {
+    console.log(`eu ja li ${livro}`);
+})
+
+
+const arr = ["carro", "moto", "bicicleta"];
+
+arr.forEach((Element, index, array) => {
+    console.log(`elemento ${Element} no indice ${index}`);
+    console.log(`array original:`, array);
+});
+*/
+
+
+enum Saborpizza {
+    sabor1 = `queijo`,
+    sabor2 = `calabresa`,
+
+for ( let Saborpizza in Sabor ) {
+    console.log(Saborpizza);
+}
+enum Tamanho {
+    pequena,
+    media,
+    grande,
+
+}
+
+class Pizza {
+    saborpizza: string
+    tamanho: string
+
+constructor (saborpizza: string, tamanho: string){
+    this.saborpizza = saborpizza
+    this.tamanho = tamanho
+}
+
+const MinhaPizza = new Pizza('saborpizza', 'tamanho' )
+
+
+}
+ 
+
+let name :Saborpizza = {
+    queijo : 'valor1',
+    calabresa : 'valor2',
+    mussarela : 'valor3',
+    portuguesa : 'valor4', 
+}
