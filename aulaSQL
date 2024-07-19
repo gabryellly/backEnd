@@ -1,0 +1,34 @@
+use ti3k5791_gabryellycristinne;
+
+CREATE TABLE  IF NOT EXIST clientes (
+    idClientes INT PRIMARY KEY,nome VARCHAR(100),
+telefone VARCHAR(100)
+);
+ALTER TABLE clientes ADD email VARCHAR(100);
+MODIFY email TEXT;
+
+-- como alterar uma tabela ja criada
+ALTER TABLE clientes
+CHANCE COLUMN email emailCliente VARCHAR
+
+ALTER TABLE clientes
+DROP COLUMN telefone;
+
+-- trocar o nome
+ALTER TABLE clientes
+
+RENAME TO clientes;
+
+-- deletar tabela
+
+DROP TABLE clientes;
+-- inserir dados na tabela
+-- use ignore para deixar os ja inseridos
+INSERT INTO clientes (idClientes, nome, email)
+VALUES (1, 'gabryelly', 'gabryelly@gmail.com'),
+(2, 'alana', 'alana@gmail.com');
+
+-- como atualizar dados em uma tabela
+UPDATE clientes
+SET email = 'novo.@gmail.com'
+WHERE idClientes = 1; -- condicao
