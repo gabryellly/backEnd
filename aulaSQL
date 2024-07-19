@@ -32,3 +32,25 @@ VALUES (1, 'gabryelly', 'gabryelly@gmail.com'),
 UPDATE clientes
 SET email = 'novo.@gmail.com'
 WHERE idClientes = 1; -- condicao
+
+--COMO DELETAR DADOS EM UMA TABELA
+DELETE FROM clientes
+WHERE idClientes = 1;
+
+-- consulta simples retorna todos os dados da tabela
+SELECT idClientes, nome, email
+FROM clientes;
+
+SELECT *
+FROM clientes;
+
+--consulta com ordenacao; retorna dados anteriores
+SELECT emailCliente
+FROM clientes
+WHERE idClientes >1;
+
+
+-- DEIXAR EM ORDEM
+SELECT *
+FROM clientes
+ORDER BY nome DESC; -- asc
