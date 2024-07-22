@@ -54,3 +54,95 @@ WHERE idClientes >1;
 SELECT *
 FROM clientes
 ORDER BY nome DESC; -- asc
+
+
+
+--como alterar uma tabela ja criada e remover
+
+ALTER TABLE
+
+--como deletar tabela
+DROP TABLE clientes;
+
+como inserir dados em uma tabela
+INSERT INTO clientes (idClientes, nome, email)
+VALUES (1, 'GABY', 'GABY@GMAIL.COM');
+
+
+--
+SELECT email
+FROM clientes
+WHERE idClientes = 1;
+
+
+--consulta com ordenacao: retorna dados ordenados
+SELECT idClientes, nome, email
+FROM clientes
+ORDER BY nome asc; --ou desc
+
+SELECT nome
+FROM clientes
+WHERE email
+
+--CONSULTA COM LIMITE DE RESULTADOS
+SELECT idClientes, nome, email
+FROM clientes
+LIMIT 3;
+
+SELECT DISTINCT email
+
+
+CLEATE TABLE pedidos (
+    idpedido INT AUTO_INCREMENT PRIMARY KEY,
+    idClientes INT,
+    numeroPedido VARCHAR(50),
+    valorTotal DECIMAL(10, 2),
+    dataPedido DATE,
+    FOREIGN KEY (idClientes) REFERENCES clientes(idClientes)
+    );
+
+
+
+
+    INSERT INTO pedidos (idClientes, numeroPedido, valorTotal, dataPedido)
+VALUES (1, 'PED-001', 150.00, '2024-07-12'),
+       (2, 'PED-002', 200.00, '2024-07-12'),
+       (1, 'PED-003', 100.00, '2024-07-12'); 
+
+
+
+    SELECT SUM(valorTotal) AS valor_Total_pedidos
+    FROM pedidos;
+    --soma os pedidos
+
+SELECT AVG(valorTotal) AS valor_Total_pedidos
+FROM pedidos
+
+SELECT MAX(numeroPedido) AS pedido_com_numero_mais_alto
+doe
+
+
+--consulta com juncao de tabelas
+
+SELECT clientes.idClientes, clientes.nome, clientes.email, pedidos.numeroPedido
+FROM clientes
+INNER JOIN pedidos ON clientes.idCliente = pedidos.idCliente;
+
+--consulta com  condicional
+SELECT clientes.idCliente, clientes.nome, clientes.emailCliente, pedidos.valorTotal
+FROM clientes
+INNER JOIN pedidos ON clientes.idClientes = pedidos.idClientes
+WHERE pedidos.valorTotal > 200;
+
+SELECT nome, GROUP_CONCAT(emailCliente SEPARATOR ', ') AS email
+FROM clientes
+GROUP BY nome;
+
+--CONTA NUMEROS DE PEDIDOS TOTAL
+SELECT COUNT(*)
+FROM pedidos;
+
+SELECT clientes.nome, COUNT(pedidos.idpedido) AS valor_Total_pedidos
+FROM clientes 
+LEFT JOIN pedidos ON clientes.idClienteS = pedidos.idClientes 
+GROUP BY clientes.nome;
