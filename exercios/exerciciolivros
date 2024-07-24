@@ -1,0 +1,86 @@
+-- CRIANDO TABELA AUTORES
+CREATE TABLE autores (
+  
+autorid INT PRIMARY key,
+nome VARCHAR(100),
+nacionalidade VARCHAR(100)
+);
+
+-- CRIANDO TABELA LIVROS
+
+  CREATE TABLE Livros (
+LivroID INT PRIMARY KEY AUTO_INCREMENT,
+Titulo VARCHAR(200) NOT NULL,
+Genero VARCHAR(50),
+AnoPublicacao INT,
+autorid INT );
+
+-- criando tabela clientes
+CREATE TABLE clientes (
+idCliente INT PRIMARY key,
+nome VARCHAR(100),
+endereco VARCHAR(100),
+telefone VARCHAR(100)
+);
+
+--criando emprestimos
+CREATE TABLE Emprestimos (
+EmprestimoID INT PRIMARY KEY AUTO_INCREMENT,
+LivroID INT,
+ClienteID INT,
+DataEmprestimo DATE,
+DataDevolucao DATE);
+
+-- adicionando dados/ autores
+
+INSERT INTO autores (AutorID, Nome, Nacionalidade) VALUES 
+(1, 'J.K. Rowling', 'Britânica'),
+(2, 'George Orwell', 'Britânico'),
+(3, 'Gabriel Garcia Marquez', 'Colombiano');
+
+-- adicionando dados/ livros
+INSERT INTO Livros (LivroID, Titulo, Genero, AnoPublicacao, AutorID) VALUES 
+(1, 'Harry Potter e a Pedra Filosofal', 'Fantasia', 1997, 1),
+(2, '1984', 'Distopia', 1949, 2),
+(3, 'Cem Anos de Solidão', 'Realismo Mágico', 1967, 3);
+
+--adicionando dados a cliente
+INSERT INTO clientes (idcliente, Nome, Endereco, Telefone) VALUES 
+(1, 'Alana faleiro', 'Rua m, 900', '2536-9847'),
+(2, 'rafaela gomes', 'Rua k, 357', '3842-3955'),
+(3, 'davi da rosa', 'Rua g, 012', '9355-0974');
+
+-- adicionando mais tabelas/ autores
+ALTER TABLE autores 
+ADD COLUMN DataNascimento DATE,
+ADD COLUMN Biografia TEXT;
+
+-- adicionando mais tabelas/ livros
+ALTER TABLE Livros
+ADD COLUMN Editora VARCHAR(100),
+ADD COLUMN NumeroPaginas INT, 
+ADD COLUMN Idioma VARCHAR(50);
+
+-- adicionando mais tabelas / clientes
+ALTER TABLE clientes
+ADD COLUMN Email VARCHAR(100),
+ADD COLUMN DataNascimento DATE;
+
+-- adiconando mais tabela / emprestimos
+ALTER TABLE Emprestimos
+ADD COLUMN DataPrevistaDevolucao DATE, 
+ADD COLUMN Status VARCHAR(20);
+
+-- adicionado em autores
+UPDATE autores SET DataNascimento = '1965-07-31', Biografia = 'j.k. rowling e uma escritora britanica, autora da serie harry potter.' WHERE autorid = 1; 
+
+-- adicinando em livros
+UPDATE Livros SET Editora = 'Bloomsbury', NumeroPaginas = 223, Idioma = 'Inglês' WHERE LivroID = 1;
+
+
+-- adicionando em clientes
+UPDATE clientes SET Email = 'alanafaleiro@gmail.com', DataNascimento = '2009-09-20' WHERE idCliente = 1;
+
+-- adicinando em emprestimo
+UPDATE Emprestimos SET DataPrevistaDevolucao = '2023-07-15', Status = 'Em andamento' WHERE EmprestimoID = 1;
+UPDATE Emprestimos SET DataPrevistaDevolucao = '2023-07-15', Status = 'Em andamento' WHERE EmprestimoID = 1;
