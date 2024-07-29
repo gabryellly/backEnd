@@ -1,0 +1,29 @@
+-- CRIANDO TABELA
+CREATE TABLE produtos (
+idProduto INT PRIMARY key,
+nome VARCHAR(100),
+categoria VARCHAR(100),
+preco VARCHAR(100)
+);
+
+INSERT INTO produtos (idProduto, nome, categoria, preco)
+VALUES (1, 'lily boneca', 'infantil', '20'),
+(2, 'kit maquiagem', 'infantil', '19'),
+(3, 'bonequinhos', 'infantil', '10'),
+(4, 'jogo tabuleiro', 'juvenil', '40'),
+(5, 'bola', 'sem criteiro', '20'),
+(6, 'casa de boneca', 'infantil', '100'),
+(7, 'play4', 'juvenil', '3.000'),
+(8, 'celular', 'juvenil', '1.000'),
+(9, 'bicicleta', 'sem criterio', '900'),
+(10, 'patins', 'sem criterio', '600');
+
+SELECT *
+FROM produtos
+ORDER BY nome DESC;
+
+SELECT COUNT(*)
+FROM produtos;
+
+SELECT AVG(valorTotal) AS valor_Total_produtos
+FROM produtos
