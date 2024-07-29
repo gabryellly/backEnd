@@ -26,9 +26,9 @@ totalValor VARCHAR(100)
 
 -- adicionando
 INSERT INTO cilentes (idClientes, nome, carroAlugado, divida, telefone, endereco)
-VALUES (1, 'gaby' 'corsa' '1.000' '5109-7900' 'rua vargas 980'),
-(2, 'alana' 'honga' '900' '0987-3647' 'rua bourgos 234'),
-(3, 'danielle' 'forja' '800' '3465-2342' 'rua avenida das americas 653');
+VALUES (1, 'gaby', 'corsa', '1.000', '5109-7900', 'rua vargas 980'),
+(2, 'alana', 'honga', '900', '0987-3647', 'rua bourgos 234'),
+(3, 'danielle', 'forja', '800', '3465-2342', 'rua avenida das americas 653');
 
-SELECT AVG(valorTotal) AS valor_Total_pedidos
-FROM pedidos
+SELECT AVG(valorTotal) AS valor_Total
+FROM alugueis_carro
