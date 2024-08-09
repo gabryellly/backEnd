@@ -1,0 +1,8 @@
+ -- criando tabela
+
+CREATE TABLE Produtos (
+idProdutos INT AUTO_INCREMENT PRIMARY KEY,
+nome VARCHAR(255),
+descricao TEXT,
+preco DECIMAL(10, 2)
+);
