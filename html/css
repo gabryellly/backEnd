@@ -1,0 +1,8 @@
+h1{
+   color: rgb(26, 25, 25); 
+}
+
+button{
+    color: rgb(116, 123, 100);
+}
+
